@@ -21,6 +21,10 @@ describe("Index page", function() {
     .get("/listings")
     .end(function(err, res){
       res.should.have.status(200);
+      res.should.be.json;
+      res.body.should.be.a("array");
+      res.body[0].should.have.property('title');
+      res.body[0].title.should.equal('Abadas');
       done();
     });
   });
