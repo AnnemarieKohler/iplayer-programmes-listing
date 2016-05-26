@@ -15,3 +15,20 @@ You may implement your solution in PHP/ node.js or any appropriate (i.e. non-obs
 We would like to see TDD being applied in this exercise.
 
 View Resources tab for API details and submission guidelines.
+
+
+DOCS
+---
+
+Start server with `npm start`
+
+TESTS
+
+server side: `npm run mocha`
+client side: `npm test`
+
+End-to-end:
+Run all three at the same time
+* `npm start`
+* `webdriver-manager start`
+* `npm run e2e`
