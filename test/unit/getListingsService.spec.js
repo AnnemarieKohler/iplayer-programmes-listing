@@ -11,9 +11,9 @@ describe("listingsService", function() {
   describe("getListings", function() {
     it("calls $http", function() {
       var listingForLetterA = {title: "A"};
-      $httpBackend.expectGET("/listings").respond(listingForLetterA);
+      $httpBackend.expectGET("/listings/a").respond(listingForLetterA);
 
-      listingsService.getListings().then(function(response) {
+      listingsService.getListings("a").then(function(response) {
         expect(response).toEqual(listingForLetterA);
       });
     });
