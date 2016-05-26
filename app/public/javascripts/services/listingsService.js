@@ -3,10 +3,12 @@ angular
   .service("listingsService",["$http", function($http) {
     var self = this;
 
-    self.getListings = function() {
-      return $http.get("/listings").then(function(response) {
+    self.getListings = function(letter) {
+      return $http.get("/listings/" + letter).then(function(response) {
         return response.data;
       });
     };
+
+
 
   }]);
