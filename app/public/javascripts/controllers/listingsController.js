@@ -6,8 +6,14 @@ angular
       var self = this;
       self.programmes = [];
 
-      listingsService.getListings().then(function(response) {
+      listingsService.getListings("a").then(function(response) {
         self.programmes = response;
       });
+
+      self.showProgrammes = function(letter) {
+        listingsService.getListings(letter).then(function(response) {
+          self.programmes = response;
+        });
+      };
 
     }]);
