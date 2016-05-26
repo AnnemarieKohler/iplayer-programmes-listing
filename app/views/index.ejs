@@ -1,11 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="listings">
   <head>
     <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="./stylesheets/style.css">
+    <script src="./javascripts/angular.js"></script>
+    <script src="./javascripts/app.js"></script>
+    <script src="./javascripts/controllers/listingsController.js"></script>
+    <script src="./javascripts/services/listingsService.js"></script>
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <section class="" ng-controller="listingsController as ctrl">
+      <ul>
+        <li class="" ng-repeat="programme in ctrl.programmes">
+          {{ programme.title }}
+        </li>
+      </ul>
+    </section>
   </body>
 </html>
