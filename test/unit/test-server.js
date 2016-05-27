@@ -41,4 +41,19 @@ describe("Index page", function() {
       done();
     });
   });
+
+  it("Should have page number in path", function() {
+    chai.request(server)
+    .get("listings/b/1")
+    .end(function(err, res){
+      res.should.have.status(200);
+      res.should.be.json;
+      res.body.should.be.a("array");
+      res.body[0].should.have.property('title');
+      res.body[0].should.have.property('page');
+      res.body[0].title.should.equal('Babi Del');
+      res.body[0].page.should.equal('1');
+      done();
+    });
+  });
 });
