@@ -23,8 +23,15 @@ describe("has listings from the bbc on the page", function() {
 
   it("should have the image of each programme", function() {
     browser.get("/");
-    var image = element(by.id('thumbnail'));
+    var image = element(by.id("thumbnail"));
     expect(image.isPresent()).toBeTruthy();
+  });
+
+  it("should have the image of each programme", function() {
+    browser.get("/");
+    $("#letter-x").click();
+    var empty = element(by.id("no-results"));
+    expect(empty.getText()).toEqual("There are no 'X' programmes.");
   });
 
 });
