@@ -7,7 +7,7 @@ a {
   color: #00B7FF;
 }
 
-nav li {
+nav li, section > ul li {
   list-style-type: none;
   display: inline
 }
