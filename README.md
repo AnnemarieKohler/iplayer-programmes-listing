@@ -20,6 +20,10 @@ DOCS
 
 LIVE DEMO: https://protected-river-14148.herokuapp.com
 
+For setup run each of the following commands:
+* `npm install`
+* `bower install`
+
 Start server with `npm start`  
 Find project at: [http://localhost:3000](http://localhost:3000)
 
@@ -31,5 +35,5 @@ client side: `npm test`
 End-to-end:
 Run all three at the same time
 * `npm start`
-* `webdriver-manager start`
+* `npm run webdriver`
 * `npm run e2e`
