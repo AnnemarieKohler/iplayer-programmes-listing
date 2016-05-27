@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/AnnemarieKohler/iplayer-programmes-listing.svg?branch=master)](https://travis-ci.org/AnnemarieKohler/iplayer-programmes-listing)
+
 TASK
 --
 Our team has been asked to work with a new HTTP API that provides iPlayer with lists of programmes sorted alphabetically.
