@@ -7,12 +7,12 @@
     <script src="./javascripts/controllers/listingsController.js"></script>
     <script src="./javascripts/services/listingsService.js"></script>
     <link rel="stylesheet" href="./stylesheets/style.css">
-
   </head>
   <body>
+    <h1>BBC iPlayer Programmes</h1>
     <section ng-controller="listingsController as ctrl">
-      <nav>
-        <ul>
+      <nav class="container">
+        <ul class="navigation">
           <li ng-click="ctrl.showProgrammes('a', '1')"><a href="#"  id="letter-a">a</a></li>
           <li ng-click="ctrl.showProgrammes('b', '1')"><a href="#"  id="letter-b">b</a></li>
           <li ng-click="ctrl.showProgrammes('c', '1')"><a href="#"  id="letter-c">c</a></li>
@@ -45,14 +45,14 @@
       <main>
         <ul class="container">
           <li class="item" ng-repeat="programme in ctrl.programmes">
-            {{ programme.title }}
+            <span class="programme-title">{{ programme.title }}</span>
             <img src="{{programme.image}}" id="thumbnail"/>
           </li>
         </ul>
 
       </main>
 
-      <section>
+      <section class="navigation">
         <ul>
           <li ng-repeat="page in ctrl.pages">
             <a href="#" ng-click="ctrl.showProgrammes(page.character, page.number)">{{ page.number }}</a>
