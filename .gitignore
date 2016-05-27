@@ -32,3 +32,5 @@ npm-debug.log
 .eslintrc.json
 
 bower_components
+
+selenium
