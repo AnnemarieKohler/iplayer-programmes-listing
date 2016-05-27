@@ -42,3 +42,12 @@ TECHNOLOGIES
 ------------
 * NodeJS with Express.js for the server side
 * Angular, HTML, CSS for the client side
+
+For testing I used Karma for the client side and Mocha for server side, and Protractor for end-to-end tests.
+
+DESIGN APPROACH
+---------------
+I wanted the design to match the BBCiPlayer theme.
+First users select the letter, then they see the results and click on the numbers to see more results for that letter.
+
+Next features would be to make the images responsive and use the small thumbnail for mobile view.
