@@ -8,13 +8,13 @@ describe("listingsService", function() {
     $httpBackend = _$httpBackend_;
   }));
 
-  describe("getListings", function() {
+  describe("#getListings", function() {
     it("calls $http", function() {
-      var listingForLetterA = {title: "A"};
-      $httpBackend.expectGET("/listings/a").respond(listingForLetterA);
+      var listingAPageOne = {title: "A", page: 1};
+      $httpBackend.expectGET("/listings/a/1").respond(listingAPageOne);
 
-      listingsService.getListings("a").then(function(response) {
-        expect(response).toEqual(listingForLetterA);
+      listingsService.getListings("a", 1).then(function(response) {
+        expect(response).toEqual(listingAPageOne);
       });
     });
   });

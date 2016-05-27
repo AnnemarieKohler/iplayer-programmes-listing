@@ -14,4 +14,11 @@ describe("has listings from the bbc on the page", function() {
     expect(programmes.count()).toEqual(20);
     expect(programmes.get(0).getText()).toEqual("Babi Del");
   });
+
+  it("should have ability to paginate if the letter has more than 20 results", function() {
+    browser.get("/");
+    var pages = element.all(by.repeater("page in ctrl.pages"));
+    expect(pages.count()).toEqual(4);
+  });
+
 });
