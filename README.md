@@ -37,3 +37,6 @@ Run all three at the same time
 * `npm start`
 * `npm run webdriver`
 * `npm run e2e`
+
+TECHNOLOGIES
+------------
