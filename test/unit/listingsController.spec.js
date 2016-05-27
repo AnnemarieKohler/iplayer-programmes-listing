@@ -13,7 +13,7 @@ describe("listingsController", function() {
   });
 
   it("has count of programmes", function() {
-    expect(ctrl.pages).toEqual(0);
+    expect(ctrl.pages).toEqual([]);
   });
 
   describe("#showProgrammes", function() {

@@ -33,7 +33,7 @@ describe("has listings from the bbc on the page", function() {
     browser.get("/");
     $("#letter-x").click();
     var empty = element(by.id("no-results"));
-    expect(empty.getText()).toEqual("There are no 'X' programmes.");
+    expect(empty.getText()).toEqual("There are no programmes starting with this letter.");
   });
 
 });
