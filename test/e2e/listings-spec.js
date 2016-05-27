@@ -21,4 +21,10 @@ describe("has listings from the bbc on the page", function() {
     expect(pages.count()).toEqual(4);
   });
 
+  it("should have the image of each programme", function() {
+    browser.get("/");
+    var image = element(by.id('thumbnail'));
+    expect(image.isPresent()).toBeTruthy();
+  });
+
 });
