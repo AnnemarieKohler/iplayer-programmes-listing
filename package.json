@@ -4,9 +4,10 @@
   "private": true,
   "scripts": {
     "start": "node ./app/bin/www",
-    "test": "./node_modules/karma/bin/karma start test/unit/karma.conf.js",
+    "test": "karma start test/unit/karma.conf.js",
     "e2e": "protractor test/e2e/protractor.conf.js",
-    "mocha": "mocha test/unit/test-server.js"
+    "mocha": "mocha test/unit/test-server.js",
+    "webdriver": "webdriver-manager update && webdriver-manager start"
   },
   "dependencies": {
     "body-parser": "~1.13.2",
@@ -20,6 +21,7 @@
     "serve-favicon": "~2.3.0"
   },
   "devDependencies": {
+    "chai": "^3.5.0",
     "jasmine-core": "^2.4.1",
     "karma": "^0.13.22",
     "karma-chrome-launcher": "^1.0.1",
