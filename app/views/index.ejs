@@ -9,7 +9,7 @@
     <script src="./javascripts/services/listingsService.js"></script>
   </head>
   <body>
-    <section class="" ng-controller="listingsController as ctrl">
+    <section ng-controller="listingsController as ctrl">
       <nav>
         <ul>
           <li ng-click="ctrl.showProgrammes('a', '1')"><a href="#"  id="letter-a">a</a></li>
@@ -42,11 +42,12 @@
       </nav>
 
       <main>
-        <ul>
-          <li class="" ng-repeat="programme in ctrl.programmes">
+        <ul class="container">
+          <li class="item" ng-repeat="programme in ctrl.programmes">
             {{ programme.title }}
           </li>
         </ul>
+
       </main>
 
       <section>

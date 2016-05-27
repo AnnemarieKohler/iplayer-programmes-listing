@@ -7,7 +7,25 @@ a {
   color: #00B7FF;
 }
 
-nav li, section > ul li {
+/* MAIN */
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.item {
+  flex-basis: 406px;
+  height: 228px;
+  margin:10px;
+  padding: 5px;
+}
+
+ul li {
   list-style-type: none;
+}
+
+nav li, section > ul li {
   display: inline
 }
