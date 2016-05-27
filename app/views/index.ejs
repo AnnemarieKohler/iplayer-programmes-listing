@@ -36,7 +36,7 @@
           <li ng-click="ctrl.showProgrammes('u', '1')"><a href="#"  id="letter-u">u</a></li>
           <li ng-click="ctrl.showProgrammes('v', '1')"><a href="#"  id="letter-v">v</a></li>
           <li ng-click="ctrl.showProgrammes('w', '1')"><a href="#"  id="letter-w">w</a></li>
-          <li>x</li>
+          <li ng-click="ctrl.showProgrammes('x', '1')"><a href="#"  id="letter-x">x</li>
           <li ng-click="ctrl.showProgrammes('y', '1')"><a href="#"  id="letter-y">y</a></li>
           <li ng-click="ctrl.showProgrammes('z', '1')"><a href="#"  id="letter-z">z</a></li>
         </ul>
@@ -44,9 +44,15 @@
 
       <main>
         <ul class="container">
-          <li class="item" ng-repeat="programme in ctrl.programmes">
-            <span class="programme-title">{{ programme.title }}</span>
-            <img src="{{programme.image}}" id="thumbnail"/>
+          <li ng-if="ctrl.programmes" class="item" ng-repeat="programme in ctrl.programmes">
+            <figure>
+              <img src="{{programme.image}}" id="thumbnail"/>
+              <figcaption class="programme-title">{{ programme.title }}</figcaption>
+              <figcaption>{{ programme.synopses }}</figcaption>
+            </figure>
+          </li>
+          <li id="no-results" ng-if="ctrl.programmes.length===0">
+            There are no 'X' programmes.
           </li>
         </ul>
 
