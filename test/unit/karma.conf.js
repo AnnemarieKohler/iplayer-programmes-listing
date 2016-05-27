@@ -25,7 +25,14 @@ module.exports = function(config) {
 
     autoWatch: true,
 
-    browsers: ['Chrome', "Firefox"],
+    browsers: ['Chrome', 'ChromeCanary'],
+
+    customLaunchers: {
+      Chrome_travis_ci: {
+        base: 'Chrome',
+        flags: ['--no-sandbox']
+      }
+    },
 
     plugins : [
       'karma-chrome-launcher',
@@ -37,4 +44,10 @@ module.exports = function(config) {
 
     concurrency: Infinity
   });
+
+  if(process.env.TRAVIS){
+    configuration.browsers = ['Chrome_travis_ci'];
+  }
+
+  config.set(configuration);
 };
