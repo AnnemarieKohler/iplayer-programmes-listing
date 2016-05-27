@@ -19,9 +19,12 @@ router.get("/listings/:letter/:page", function(req, res, next) {
     var programmesList = data.elements;
 
     var programmes = programmesList.map(function(programme) {
+      var image = programme.images.standard.replace("{recipe}","406x228");
+
       return {  title : programme.title,
                 page: data.page,
-                character: data.character};
+                character: data.character,
+                image: image};
     });
     var list = {count: data.count, programmes: programmes};
     res.send(list);
