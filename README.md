@@ -23,7 +23,7 @@ https://protected-river-14148.herokuapp.com
 
 For setup run each of the following commands:
 * `npm install`
-* `bower install`
+* `npm run bower`
 
 Start server with `npm start`  
 Find project at: [http://localhost:3000](http://localhost:3000)
