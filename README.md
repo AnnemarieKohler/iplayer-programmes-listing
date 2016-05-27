@@ -13,7 +13,7 @@ Each of the listing pages should include:
 Further requirements:
 - implement solution in PHP/ node.js or any appropriate (i.e. non-obscure) language.
 - TDD being applied in this exercise.
-- 
+
 
 DOCS
 ---
