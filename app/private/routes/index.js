@@ -24,7 +24,8 @@ router.get("/listings/:letter/:page", function(req, res, next) {
       return {  title : programme.title,
                 page: data.page,
                 character: data.character,
-                image: image};
+                image: image,
+                synopses: programme.synopses.small};
     });
     var list = {count: data.count, programmes: programmes};
     res.send(list);

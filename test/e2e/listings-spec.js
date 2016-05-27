@@ -4,7 +4,8 @@ describe("has listings from the bbc on the page", function() {
 
     var programmes = element.all(by.repeater("programme in ctrl.programmes"));
     expect(programmes.count()).toEqual(20);
-    expect(programmes.get(0).getText()).toEqual("Abadas");
+    expect(programmes.get(0).getText()).toContain("Abadas");
+    expect(programmes.get(0).getText()).toContain("Pop-up book adventures with the curious Abadas");
   });
 
   it("should get programmes of 'b' when clicking 'b'", function() {
@@ -12,7 +13,8 @@ describe("has listings from the bbc on the page", function() {
     $("#letter-b").click();
     var programmes = element.all(by.repeater("programme in ctrl.programmes"));
     expect(programmes.count()).toEqual(20);
-    expect(programmes.get(0).getText()).toEqual("Babi Del");
+    expect(programmes.get(0).getText()).toContain("Babi Del");
+    expect(programmes.get(0).getText()).toContain("Cyfres yn dilyn naw mam sydd wedi gadael i'r camerâu eu ffilmio wrth iddynt ddod â bywy...");
   });
 
   it("should have ability to paginate if the letter has more than 20 results", function() {
