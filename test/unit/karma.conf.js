@@ -54,7 +54,7 @@ module.exports = function(config) {
       'karma-spec-reporter'
     ],
 
-    singleRun: false,
+    singleRun: true,
 
     concurrency: Infinity
   });

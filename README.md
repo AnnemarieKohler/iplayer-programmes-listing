@@ -40,3 +40,5 @@ Run all three at the same time
 
 TECHNOLOGIES
 ------------
+* NodeJS with Express.js for the server side
+* Angular, HTML, CSS for the client side
