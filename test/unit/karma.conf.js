@@ -3,6 +3,7 @@ module.exports = function(config) {
     basePath: '../..',
     frameworks: ['jasmine'],
     files: [
+      'node_modules/babel-polyfill/dist/polyfill.js',
       'bower_components/angular/angular.js',
       'bower_components/angular-mocks/angular-mocks.js',
       'app/public/javascripts/**/*.js',
@@ -25,16 +26,29 @@ module.exports = function(config) {
 
     autoWatch: true,
 
-    browsers: ['Chrome', 'ChromeCanary'],
+    browsers: ['PhantomJS', 'PhantomJS_custom'],
 
+    // you can define custom flags
     customLaunchers: {
-      Chrome_travis_ci: {
-        base: 'Chrome',
-        flags: ['--no-sandbox']
+      'PhantomJS_custom': {
+        base: 'PhantomJS',
+        options: {
+          windowName: 'my-window',
+          settings: {
+            webSecurityEnabled: false
+          },
+        },
+        flags: ['--load-images=true'],
+        debug: true
       }
     },
 
+    phantomjsLauncher: {
+      exitOnResourceError: true
+    },
+
     plugins : [
+      'karma-phantomjs-launcher',
       'karma-chrome-launcher',
       'karma-jasmine',
       'karma-spec-reporter'
@@ -44,10 +58,4 @@ module.exports = function(config) {
 
     concurrency: Infinity
   });
-
-  if(process.env.TRAVIS){
-    configuration.browsers = ['Chrome_travis_ci'];
-  }
-
-  config.set(configuration);
 };
