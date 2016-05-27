@@ -2,11 +2,12 @@
 <html ng-app="listings">
   <head>
     <title><%= title %></title>
-    <link rel="stylesheet" href="./stylesheets/style.css">
     <script src="./javascripts/angular.js"></script>
     <script src="./javascripts/app.js"></script>
     <script src="./javascripts/controllers/listingsController.js"></script>
     <script src="./javascripts/services/listingsService.js"></script>
+    <link rel="stylesheet" href="./stylesheets/style.css">
+
   </head>
   <body>
     <section ng-controller="listingsController as ctrl">
@@ -45,6 +46,7 @@
         <ul class="container">
           <li class="item" ng-repeat="programme in ctrl.programmes">
             {{ programme.title }}
+            <img src="{{programme.image}}" id="thumbnail"/>
           </li>
         </ul>
 
