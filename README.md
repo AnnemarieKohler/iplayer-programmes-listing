@@ -18,7 +18,8 @@ Further requirements:
 DOCS
 ---
 
-LIVE DEMO: https://protected-river-14148.herokuapp.com
+*LIVE DEMO*  
+https://protected-river-14148.herokuapp.com
 
 For setup run each of the following commands:
 * `npm install`
@@ -27,12 +28,11 @@ For setup run each of the following commands:
 Start server with `npm start`  
 Find project at: [http://localhost:3000](http://localhost:3000)
 
-TESTS
+*TESTS*  
+Server side: `npm run mocha`  
+Client side: `npm test`
 
-server side: `npm run mocha`
-client side: `npm test`
-
-End-to-end:
+End-to-end:  
 Run all three at the same time
 * `npm start`
 * `npm run webdriver`
