@@ -53,3 +53,7 @@ I wanted the design to match the BBCiPlayer theme.
 First users select the letter, then they see the results and click on the numbers to see more results for that letter.
 
 Next features would be to make the images responsive and use the small thumbnail for mobile view.
+
+AUTHOR
+------
+Annemarie Kohler
